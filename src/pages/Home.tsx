@@ -19,7 +19,7 @@ const Home = () => {
     dispatch(initializeFilter());
   }, [dispatch]);
 
-  const featuredDestinations = packages.slice(0, 3);
+  const topRatedTrips = [...packages].sort((a, b) => b.rating - a.rating).slice(0, 5);
 
   return (
     <div className="min-h-screen">
@@ -83,20 +83,20 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Destinations */}
+      {/* Discover Your Next Adventure */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 animate-fade-in">
-              Featured Destinations
+              Discover Your Next Adventure
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Discover our most popular travel packages and start planning your next adventure
+              Explore our top-rated destinations and embark on unforgettable journeys
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {featuredDestinations.map((destination, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+            {topRatedTrips.map((destination, index) => (
               <Card key={destination.id} className="group cursor-pointer hover:shadow-travel transition-all duration-300 overflow-hidden animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="relative overflow-hidden">
                   <img 

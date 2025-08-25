@@ -26,6 +26,7 @@ const Navbar = () => {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/travel', label: 'Travel' },
+    { href: '/create-trip', label: 'Create Trip' },
     { href: '/chat', label: 'Support' },
   ];
 

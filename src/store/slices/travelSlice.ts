@@ -88,6 +88,14 @@ const travelSlice = createSlice({
     removeFromWishlist: (state, action: PayloadAction<string>) => {
       state.wishlist = state.wishlist.filter(id => id !== action.payload);
     },
+    addTrip: (state, action: PayloadAction<Omit<TravelPackage, 'id'>>) => {
+      const newTrip: TravelPackage = {
+        ...action.payload,
+        id: Date.now().toString(),
+      };
+      state.packages.push(newTrip);
+      state.filteredPackages = filterPackages(state);
+    },
     initializeFilter: (state) => {
       state.filteredPackages = state.packages;
     },
@@ -117,6 +125,7 @@ export const {
   setSelectedCategory, 
   addToWishlist, 
   removeFromWishlist,
+  addTrip,
   initializeFilter
 } = travelSlice.actions;
 

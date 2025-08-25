@@ -123,6 +123,10 @@ const Travel = () => {
               </p>
             )}
           </div>
+          <Button variant="ocean" onClick={() => window.location.href = '/create-trip'}>
+            <Users className="w-4 h-4 mr-2" />
+            Create Trip
+          </Button>
         </div>
 
         {/* Travel Packages Grid */}

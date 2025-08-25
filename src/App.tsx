@@ -8,6 +8,7 @@ import { store } from "./store/store";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Travel from "./pages/Travel";
+import CreateTrip from "./pages/CreateTrip";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Chat from "./pages/Chat";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="travel" element={<Travel />} />
+              <Route path="create-trip" element={<CreateTrip />} />
               <Route path="chat" element={<Chat />} />
             </Route>
             <Route path="/login" element={<Login />} />

@@ -16,14 +16,13 @@ const Layout = () => {
       {/* Floating Action Button for Create Trip */}
       <Link 
         to="/create-trip"
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-8 right-8 z-50"
       >
         <Button 
           variant="ocean" 
-          size="lg"
-          className="rounded-full w-14 h-14 shadow-travel hover:shadow-glow transition-all duration-300 hover:scale-110"
+          className="rounded-full w-16 h-16 p-0 shadow-travel hover:shadow-glow transition-all duration-300 hover:scale-110"
         >
-          <Plus className="w-6 h-6" />
+          <Plus className="w-7 h-7" />
         </Button>
       </Link>
     </div>

@@ -15,7 +15,7 @@ const Layout = () => {
       
       {/* Floating Action Button for Create Trip */}
       <Link 
-        to="/create-trip"
+        to="create-trip"
         className="fixed bottom-8 right-8 z-50"
       >
         <Button 
